@@ -1,0 +1,46 @@
+## This is sql code to make a simple database to serve the purpose of me practicing(reviewing my sql skills)
+## bear in mind if you read this some may be jumbled code so dont copy paste blindly
+## this file is solely for MY learning purposes
+
+create table friends
+ (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+insert into friends(
+  id,name,birthday
+)
+values (1, "Ororo Munroe", '1940-5-30');
+
+
+insert into friends(
+  id,name, birthday
+)
+values(2,'Tics', '1998-12-25');
+insert into friends(
+  id,name, birthday
+)
+values(3,'mark', '1998-12-24');
+
+
+update friends
+set name = "Storm"
+where name = 'Ororo Munroe';
+
+alter table friends
+add column email;
+
+update friends
+set email = 'storm@codecademy.com'
+where name = "Storm";
+
+update friends
+set email = 'tics@codecademy.com'
+where name = "Tics";
+update friends
+set email = 'mark@codecademy.com'
+where name = "mark";
+
+select * from friends;
